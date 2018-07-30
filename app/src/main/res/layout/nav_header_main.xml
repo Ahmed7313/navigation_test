@@ -3,33 +3,113 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:background="#64192F"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:background="#64192F">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="99dp"
-        android:layout_height="84dp"
+    <agency.tango.android.avatarview.views.AvatarView
+        android:id="@+id/round_img_avatar"
+        android:layout_width="102dp"
+        android:layout_height="89dp"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="27dp"
-        app:srcCompat="@drawable/ahmed_adel" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/ahmed_adel"
+        app:avCornerRadius="65dp"
+        app:av_border_color="@android:color/white"
+        app:av_border_width="4dp"
+        app:av_text_size_percentage="35" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="37dp"
+        android:layout_marginStart="97dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <agency.tango.android.avatarview.views.AvatarView
+                android:id="@+id/avatarView"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ahmed_adel"
+                app:avCornerRadius="65dp"
+                app:av_border_color="@android:color/white"
+                app:av_border_width="4dp"
+                app:av_text_size_percentage="35" />
+
+            <TextView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_alignBottom="@+id/avatarView2"
+                android:layout_alignEnd="@+id/avatarView2"
+                android:layout_gravity="bottom|left"
+                android:background="@drawable/notification_number_circle"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <agency.tango.android.avatarview.views.AvatarView
+                android:id="@+id/avatarView2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ahmed_adel"
+                app:avCornerRadius="65dp"
+                app:av_border_color="@android:color/white"
+                app:av_border_width="4dp"
+                app:av_text_size_percentage="35" />
+
+            <TextView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_alignBottom="@+id/avatarView2"
+                android:layout_alignEnd="@+id/avatarView2"
+                android:layout_gravity="bottom|left"
+                android:background="@drawable/notification_number_circle"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+        </LinearLayout>
+    </LinearLayout>
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="48dp"
         android:text="@string/user_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/background_light"
         android:textSize="24dp" />
-
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="8dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:background="#FFBA00" />
-
+        android:background="#FFBA00"
+        android:orientation="horizontal" />
 </RelativeLayout>
